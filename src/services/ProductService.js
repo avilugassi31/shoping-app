@@ -8,15 +8,33 @@ export const ProductService = {
 
 const products = [
     {
-        id: '101',
+        _id: '101',
         name: 'Tape Double Cassete',
         price: 98,
         details: 'old Double cassete',
     },
-    { id: '102', name: 'Radio', price: 23, details: 'old Double cassete' },
+    { _id: '102', name: 'Radio', price: 23, details: 'old Double cassete' },
     {
-        id: '103',
+        _id: '103',
         name: 'Vinyl Record',
+        price: 109,
+        details: 'old Double cassete',
+    },
+    {
+        _id: '104',
+        name: 'Ps5',
+        price: 109,
+        details: 'old Double cassete',
+    },
+    {
+        _id: '105',
+        name: 'Xbox One',
+        price: 109,
+        details: 'old Double cassete',
+    },
+    {
+        _id: '106',
+        name: 'Soccer Ball',
         price: 109,
         details: 'old Double cassete',
     },
@@ -86,9 +104,8 @@ function filter({ term }) {
     term = term.toLocaleLowerCase();
     return products.filter((product) => {
         return (
-            product.name.toLocaleLowerCase().includes(term) ||
-            product.phone.toLocaleLowerCase().includes(term) ||
-            product.email.toLocaleLowerCase().includes(term)
+            product.name.toLocaleLowerCase().includes(term) 
+            // product.phone.toLocaleLowerCase().includes(term)   
         );
     });
 }

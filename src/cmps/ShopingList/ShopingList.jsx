@@ -1,15 +1,19 @@
+import React from 'react';
+import { ShopingPreview } from '../ShopingPreview';
+import './ShopingList.scss';
 
-import { Component } from 'react'
-
-import './ShopingList.scss'
-
-export class ShopingList extends Component {
-
-    render() {
-        return (
-            <div>
-            
-            </div>
-        )
-    }
+export function ShopingList({ addToCart, Products }) {
+    
+    return (
+        <div className='product-list'>
+            {Products &&
+                Products.map((product) => (
+                    <ShopingPreview
+                        product={product}
+                        key={product._id}
+                        addToCart={addToCart}
+                    />
+                ))}
+        </div>
+    );
 }
